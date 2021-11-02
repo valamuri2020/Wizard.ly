@@ -1,9 +1,8 @@
 # CV Swiss knife, tool #1
 import cv2
 import numpy as np
-import mediapipe as mp
 import time
-import modules.hand_tracking_module as htm
+import hand_tracking_module as htm
 import math 
 from ctypes import cast, POINTER
 from comtypes import CLSCTX_ALL
@@ -37,7 +36,6 @@ while True:
     lmList, _ = detector.findPosition(img, draw=False)
     
     if len(lmList) != 0: 
-        # print(lmList[4], lmList[8])
         x1, y1 = lmList[4][1], lmList[4][2]
         x2, y2 = lmList[8][1], lmList[8][2]
         # center of line
@@ -55,7 +53,6 @@ while True:
         barVol = np.interp(vol, [20, 125], [400,150])
         volPercent = np.interp(vol, [20, 125], [0, 100])
 
-        print(length, vol)
         fingers = detector.fingersOpen()
         
         # volume changing activated when pinky down and other fingers open so changes do not occur when a fist is made
