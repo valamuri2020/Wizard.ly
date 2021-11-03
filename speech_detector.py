@@ -1,7 +1,7 @@
 import speech_recognition as sr
 
 class SpeechDetector():
-    def __init__(self) -> None:
+    def __init__(self):
         self.listener = sr.Recognizer()
     
     def getAudio(self):
