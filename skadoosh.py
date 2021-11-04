@@ -1,5 +1,6 @@
 # TODO: reorder imports
 # TODO: add page scrolling
+# TODO: add zoom images 
 # TODO: fix audio input screen freeze
 
 import cv2
