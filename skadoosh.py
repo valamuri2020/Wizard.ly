@@ -1,25 +1,24 @@
-# TODO: reorder imports
-# TODO: add page scrolling
 # TODO: add zoom images 
 # TODO: fix audio input screen freeze
 
 import cv2
 import numpy as np 
+import math 
+
 import keyboard
 import mouse
 import pyautogui
-import math 
-from screeninfo import get_monitors
 import time
 
+from screeninfo import get_monitors
 from colors import colors
-import hand_tracking_module as htm
 
+import hand_tracking_module as htm
+import speech_detector as sr
 from ctypes import cast, POINTER
 from comtypes import CLSCTX_ALL
 from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
 
-import speech_detector as sr
 
 cap = cv2.VideoCapture(0)
 
@@ -50,17 +49,6 @@ volPercent = 0
 
 # speech recognition listener
 listener = sr.SpeechDetector()
-
-# scrolling variables
-scrollSpeed = 1
-sleepTime = 1
-
-def scroll(down):
-    if down:
-        pyautogui.scroll(-scrollSpeed)
-    else : 
-        pyautogui.scroll(scrollSpeed)
-    pyautogui.time.sleep(sleepTime)
 
 while True:
     success, img = cap.read()
@@ -161,18 +149,11 @@ while True:
         x1, y1 = landmarks[4][1:]
         x2, y2 = landmarks[8][1:]
         
-        # length, img, lineData = detector.calculateDistance(8, 20, img, draw=False)
-        # cx, cy = lineData[-2:]
-        # fingers = detector.fingersOpen()
-        
         if fingers[0] and y2 > y1:
-            # scroll(down=True)
             print("scrolling down")
             mouse.move(scrWidth-5, scrHeight-80)
-            # pyautogui.scroll(-scrollSpeed)
-            # pyautogui.time.sleep(sleepTime)
+
         elif fingers[0] and y2 < y1 and sum(fingers[2:4]) == 0:
-            # scroll(down=False)
             print("scrolling up")
             mouse.move(scrWidth-5, 172)
                     
