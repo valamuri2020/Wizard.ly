@@ -7,8 +7,10 @@ import cv2
 import numpy as np 
 import keyboard
 import mouse
+import pyautogui
 import math 
 from screeninfo import get_monitors
+import time
 
 from colors import colors
 import hand_tracking_module as htm
@@ -49,6 +51,17 @@ volPercent = 0
 # speech recognition listener
 listener = sr.SpeechDetector()
 
+# scrolling variables
+scrollSpeed = 1
+sleepTime = 1
+
+def scroll(down):
+    if down:
+        pyautogui.scroll(-scrollSpeed)
+    else : 
+        pyautogui.scroll(scrollSpeed)
+    pyautogui.time.sleep(sleepTime)
+
 while True:
     success, img = cap.read()
     
@@ -67,7 +80,7 @@ while True:
         frameR = 120
         
         # when middle, ring, and pinky fingers closed
-        if sum(fingers[2:]) == 0:     
+        if sum(fingers[2:]) == 0 and fingers[0] == 0:     
             # reduce virtual mousepad area, then draw
             cv2.rectangle(img, (frameR, frameR), (camWidth - frameR, camHeight - frameR), colors["purple"], 2)   
             # convert camera coordinates to screen coordinates
@@ -95,7 +108,7 @@ while True:
                 cv2.circle(img, (cLineX, cLineY), 15, colors["green"], cv2.FILLED)
                 mouse.click()
                
-    """ Gesture Control Volume """
+    """ Volume Control """
     if len(landmarks) != 0: 
         x1, y1 = landmarks[4][1:]
         x2, y2 = landmarks[8][1:]
@@ -139,12 +152,35 @@ while True:
             print("speech to text mode")
             text = listener.getAudio()
             print("received :", text)
-            if type(text) != None :
+            if type(text) == list :
                 keyboard.write(text=text)
                 
-
-
-    cv2.imshow("skadoosh ✨", img)
+    """ Page Scrolling """
+    if len(landmarks) != 0:
+        # thumb
+        x1, y1 = landmarks[4][1:]
+        x2, y2 = landmarks[8][1:]
+        
+        # length, img, lineData = detector.calculateDistance(8, 20, img, draw=False)
+        # cx, cy = lineData[-2:]
+        # fingers = detector.fingersOpen()
+        
+        if fingers[0] and y2 > y1:
+            # scroll(down=True)
+            print("scrolling down")
+            mouse.move(scrWidth-5, scrHeight-80)
+            # pyautogui.scroll(-scrollSpeed)
+            # pyautogui.time.sleep(sleepTime)
+        elif fingers[0] and y2 < y1 and sum(fingers[2:4]) == 0:
+            # scroll(down=False)
+            print("scrolling up")
+            mouse.move(scrWidth-5, 172)
+                    
+        mouse.click()
+        mouse.click()
+        time.sleep(.3)
+         
+    cv2.imshow("skadoosh", img)
     
     if cv2.waitKey(1) & 0xFF == ord('d'):
         break
