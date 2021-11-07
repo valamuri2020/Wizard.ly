@@ -1,6 +1,3 @@
-# TODO: add zoom images 
-# TODO: fix audio input screen freeze
-
 import cv2
 import numpy as np 
 import math 
@@ -57,6 +54,7 @@ while True:
     landmarks, boundingBox = detector.findPosition(img)
     # if hand detected, len(landmarks) will be nonzero
     
+    # note that each feature is within its own if statement for easy readability
     """ Virtual Mouse """
     if len(landmarks) != 0:
         x1, y1 = landmarks[8][1:]

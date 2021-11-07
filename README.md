@@ -13,7 +13,7 @@ Do you want to:
 - scroll pages,
 - adjust the volume,
 - move the mouse and click,
-- or even send a message without having to touch your laptop?
+- or even send a message using your voice?
 
 If you said yes to any of these, then [NAME] has got you covered.
 
