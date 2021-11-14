@@ -6,7 +6,6 @@ We all enjoy watching movies from a comfy spot with pillows, snacks and blankets
 
 ## Demo ✋
 
-<hr />
 Do you want to:
 
 - play/pause a YouTube video,
@@ -22,8 +21,6 @@ Here's a quick how-to-guide 🙂
 <!-- How to use each gesture + gif -->
 
 ## Technologies 🛠️
-
-<hr />
 
 The core of the project is built using:
 
@@ -42,17 +39,12 @@ Other libraries used to enhance functionality include:
 
 ## Accomplishments 💪
 
-<hr />
-
 I'm glad to have used my OpenCV knowledge to build a tool that I can see myself using regularly. If you do check out my code, you will find that my method for scrolling pages a bit cheeky 😁 - I was very excited when that worked out. Also, having developed a module for hand tracking using OOP principles, it will enable me to work on future projects more efficiently. Lastly, I find it amazing that we can achieve wizardly powers with the power of Computer Vision, and it compells me to dive deeper!
 
 ## Note
 
-<hr/>
 
 Credits to [Murtaza's Workshop](https://www.youtube.com/c/MurtazasWorkshopRoboticsandAI) for helping me learn OpenCV.
-
-<br/>
 
 Lastly, if you've read this far, I'd like to leave you with my favorite GIF from Kung Fu Panda that shows the power of the Wuxi Finger Hold - a simple hand gesture..._skadoosh_!
 
