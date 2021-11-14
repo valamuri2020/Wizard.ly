@@ -1,8 +1,8 @@
-# [NAME]
+# Wizard.ly
 
 ## Inspiration ✨
 
-We all enjoy watching movies from a comfy spot with pillows, snacks and blankets. But...those ads at the at the climax of an epic scene? Not so enjoyable. You had to get up, stumble through your snack setup, pillows, get to your laptop and skip the ad. Enter [NAME], a desktop application that allows us to execute commands with nothing but a few gestures of your palm - almost like it's straight out of a Harry Potter movie.
+We all enjoy watching movies from a comfy spot with pillows, snacks and blankets. But...those ads at the at the climax of an epic scene? Not so enjoyable. You had to get up, stumble through your snack setup, pillows, get to your laptop and skip the ad. Enter Wizard.ly, a desktop application that allows us to execute commands with nothing but a few gestures of your palm - almost like it's straight out of a Harry Potter movie.
 
 ## Demo ✋
 
@@ -15,7 +15,7 @@ Do you want to:
 - move the mouse and click,
 - or even send a message using your voice?
 
-If you said yes to any of these, then [NAME] has got you covered.
+If you said yes to any of these, then Wizard.ly has got you covered.
 
 Here's a quick how-to-guide 🙂
 
