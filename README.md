@@ -14,9 +14,9 @@ Do you want to:
 - move the mouse and click,
 - or even send a message using your voice?
 
-If you said yes to any of these, then Wizard.ly has got you covered.
+<!-- If you said yes to any of these, then Wizard.ly has got you covered. -->
 
-Here's a quick how-to-guide 🙂
+<!-- Here's a quick how-to-guide 🙂 -->
 
 <!-- How to use each gesture + gif -->
 
@@ -46,8 +46,8 @@ I'm glad to have used my OpenCV knowledge to build a tool that I can see myself 
 
 Credits to [Murtaza's Workshop](https://www.youtube.com/c/MurtazasWorkshopRoboticsandAI) for helping me learn OpenCV.
 
-Lastly, if you've read this far, I'd like to leave you with my favorite GIF from Kung Fu Panda that shows the power of the Wuxi Finger Hold - a simple hand gesture..._skadoosh_!
+<!-- Lastly, if you've read this far, I'd like to leave you with my favorite GIF from Kung Fu Panda that shows the power of the Wuxi Finger Hold - a simple hand gesture..._skadoosh_! -->
 
 <!--  GIF to show the power of a few fingers -->
 
-![image](https://c.tenor.com/e7esFNmlkpkAAAAC/skadoosh-wuxifingerhold.gif)
+<!-- ![image](https://c.tenor.com/e7esFNmlkpkAAAAC/skadoosh-wuxifingerhold.gif) -->
