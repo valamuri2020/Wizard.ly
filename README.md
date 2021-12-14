@@ -4,7 +4,7 @@
 
 We all enjoy watching movies from a comfy spot with pillows, snacks and blankets. But...those ads at the at the climax of an epic scene? Not so enjoyable. You had to get up, stumble through your snack setup, pillows, get to your laptop and skip the ad. Enter Wizard.ly, a desktop application that allows us to execute commands with nothing but a few gestures of your palm - almost like it's straight out of a Harry Potter movie.
 
-## Demo ✋
+## Features ✋
 
 Do you want to:
 
@@ -19,6 +19,17 @@ Do you want to:
 <!-- Here's a quick how-to-guide 🙂 -->
 
 <!-- How to use each gesture + gif -->
+
+## Instructions
+
+The machine should be running Python 3.8 or above.
+
+1. The system should have OpenCV and MediaPipe installed. If not
+
+`pip install opencv-python mediapipe`
+
+2. Then, in your command prompt, run `python wizardly.py`.
+3. Enjoy!
 
 ## Technologies 🛠️
 
