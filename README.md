@@ -26,7 +26,7 @@ The machine should be running Python 3.8 or above.
 
 1. The system should have OpenCV and MediaPipe installed. If not
 
-`pip install opencv-python mediapipe`
+  `pip install opencv-python mediapipe`
 
 2. Then, in your command prompt, run `python wizardly.py`.
 3. Enjoy!
